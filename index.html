@@ -1,0 +1,40 @@
+<!--
+  吉伊卡哇(Chiikawa)主题小屋 - 入口HTML文件
+  这是整个Vue单页应用(SPA)的入口页面
+  Vite会解析此文件中的<script type="module">标签来加载Vue应用
+
+  页面结构：
+  - #app div: Vue应用挂载点，所有Vue组件都将渲染在此元素内
+  - script标签: 加载/src/main.js作为应用入口模块
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- 字符编码：使用UTF-8以支持中文、日文等多语言字符 -->
+  <meta charset="UTF-8">
+  <!-- 视口配置：确保在移动设备上正确缩放和显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO描述：帮助搜索引擎了解网站内容 -->
+  <meta name="description" content="吉伊卡哇(Chiikawa)主题小屋 - 探索可爱角色的奇妙世界">
+  <!-- 页面标题：显示在浏览器标签页上 -->
+  <title>吉伊卡哇小屋</title>
+  <!--
+    网站图标(Favicon): 使用内联SVG数据URI，无需额外的图标文件
+    显示一个樱花emoji 🌸 作为网站的小图标
+  -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+  <!--
+    Vue应用挂载点
+    整个Vue应用（包括导航栏、页面内容、页脚等）都会在这个div内渲染
+  -->
+  <div id="app"></div>
+  <!--
+    加载Vue应用入口模块
+    type="module" 告诉浏览器这是一个ES模块，支持import/export语法
+    Vite开发服务器会拦截这个请求并处理模块转换
+  -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
